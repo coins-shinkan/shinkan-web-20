@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Helmet from "react-helmet";
 
 const Heading1 = styled.h1`
-  color: red;
+  color: blue;
 `;
 export default () => (
   <>
