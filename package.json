@@ -8,7 +8,8 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,json,yaml,html}\""
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,json,yaml,html}\"",
+    "lint": "eslint src --ext .js"
   },
   "dependencies": {
     "gatsby": "2.18.5",
@@ -20,6 +21,10 @@
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.0",
     "prettier": "^1.19.1"
   }
 }
