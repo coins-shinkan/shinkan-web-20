@@ -23,7 +23,7 @@ const eventList = [
   {date: "2020-04-01", eventName: "宿舎入居"},
   {date: "2020-04-01", eventName: "宿舎入居"},
   {date: "2020-04-01", eventName: "宿舎入居"},
-  {date: "2020-04-01", eventName: "宿舎入居"},
+  {date: "2020-04-01", eventName: "履修相談""},
   {date: "2020-04-01", eventName: "学類懇親会"},
   {date: "2020-04-01", eventName: "合宿"},
   {date: "2020-04-03", eventName: "入学式"},
