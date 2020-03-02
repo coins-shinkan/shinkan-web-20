@@ -35,5 +35,5 @@ $ npm run lint
 また、ESLint を経由して [Prettier](https://github.com/prettier/prettier) を使っています。Prettier で実行されるようなフォーマットのエラーの場合、次のコマンドで自動修正が可能です。
 
 ```sh
-$ npm run lint --fix
+$ npm run lint:fix
 ```
