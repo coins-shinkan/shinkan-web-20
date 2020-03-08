@@ -24,11 +24,6 @@ const Jouhou = styled.p`
   line-height: 1.5em;
 `;
 
-const Body = styled.div`
-  max-width: 1000px;
-  margin: auto;
-`;
-
 const Footer = styled.div`
   background-color: gray;
   height: 80px;
@@ -51,7 +46,7 @@ const CoinsLayout = ({ children }) => {
           新歓2020
         </Jouhou>
       </Header>
-      <Body>{children}</Body>
+      {children}
       <Footer>
         <FooterText>
           筑波大学 情報学群 情報科学類

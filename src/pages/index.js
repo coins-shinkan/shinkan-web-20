@@ -5,6 +5,7 @@ import CoinsLayout from "../layouts/header";
 import EventsCard from "../layouts/EventsCard";
 import TopCard from "../layouts/TopCard";
 import { secondary } from "../lib/colors";
+import eventList from "../contents/eventList.json";
 
 const Heading1 = styled.div`
   background-color: ${secondary};
@@ -14,27 +15,21 @@ const Heading1 = styled.div`
 
 const OtherCard = styled.div`
   display: flex;
-  width: fit-content;
+  max-width: 1160px;
   margin: auto;
   margin-top: 30px;
 `;
 
-const eventList = [
-  { date: "2020-04-01", eventName: "宿舎入居" },
-  { date: "2020-04-01", eventName: "宿舎入居" },
-  { date: "2020-04-01", eventName: "宿舎入居" },
-  { date: "2020-04-01", eventName: "履修相談" },
-  { date: "2020-04-01", eventName: "学類懇親会" },
-  { date: "2020-04-01", eventName: "合宿" },
-  { date: "2020-04-03", eventName: "入学式" },
-  { date: "2020-04-04", eventName: "TOEFL" }
-];
-
 const events = [
-  { title: "FAQ", description: "よくある質問と回答のまとめです．" },
+  {
+    title: "FAQ",
+    description: "よくある質問と回答のまとめです．",
+    link: "faq"
+  },
   {
     title: "新歓委員より",
-    description: "私たちから，新入生の皆さんへのご挨拶です．"
+    description: "私たちから，新入生の皆さんへのご挨拶です．",
+    link: "about"
   }
 ];
 
@@ -52,6 +47,7 @@ export default () => (
               key={event.title}
               title={event.title}
               description={event.description}
+              link={event.link}
             />
           ))}
         </OtherCard>

@@ -5,7 +5,7 @@ const Card = styled.div`
   background-color: white;
   display: flex;
   align-items: end;
-  width: 600px;
+  width: 50%;
   margin-right: 30px;
   margin-left: 30px;
   margin-top: 30px;
@@ -26,14 +26,21 @@ const Title = styled.h3`
   margin-top: 30px;
   font-weight: normal;
   font-size: 30px;
+  color: black;
 `;
 
-export default ({ title, description }) => {
+const Link = styled.a`
+  text-decoration-color: black;
+`;
+
+export default ({ title, description, link }) => {
   return (
     <Card>
       <Figure />
       <Texts>
-        <Title>{title}</Title>
+        <Link href={link}>
+          <Title>{title}</Title>
+        </Link>
         <p>{description}</p>
       </Texts>
     </Card>

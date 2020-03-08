@@ -1,8 +1,13 @@
 import React from "react";
-import Styled from "styled-components";
+import styled from "styled-components";
 import Helmet from "react-helmet";
 import CoinsLayout from "../layouts/header";
 import faq from "../contents/faq.json";
+
+const Content = styled.div`
+  max-width: 1000px;
+  margin: auto;
+`;
 
 const Fq = ({ question, answer }) => {
   return (
@@ -20,11 +25,13 @@ export default () => {
         <title>Frequently asked questions</title>
       </Helmet>
       <CoinsLayout>
-        <h1>Frequently Asked Questions</h1>
-        <p>ふぁっきゅふぁっきゅー！ふぁ゛っ゛っ゛ぎゅー！！</p>
-        {faq.map(qaPair => (
-          <Fq question={qaPair.question} answer={qaPair.answer} />
-        ))}
+        <Content>
+          <h1>Frequently Asked Questions</h1>
+          <p>ふぁっきゅふぁっきゅー！ふぁ゛っ゛っ゛ぎゅー！！</p>
+          {faq.map(qaPair => (
+            <Fq question={qaPair.question} answer={qaPair.answer} />
+          ))}
+        </Content>
       </CoinsLayout>
     </>
   );
