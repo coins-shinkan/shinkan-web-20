@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
-import CoinsLayout from "../layouts/header";
+import CoinsLayout from "../layouts/CoinsLayout";
 import faq from "../contents/faq.json";
 
 const Content = styled.div`

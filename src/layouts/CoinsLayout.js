@@ -9,15 +9,19 @@ const Header = styled.div`
   align-items: center;
 `;
 
-const Coins = styled.h1`
+const Left = styled.h1`
   color: white;
   width: fit-content;
   margin-left: auto;
   margin-right: 30px;
-  font-size: 40px;
+  font-size: 2.5em;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 `;
 
-const Jouhou = styled.p`
+const Right = styled.p`
   color: white;
   width: fit-content;
   margin-right: auto;
@@ -39,12 +43,14 @@ const CoinsLayout = ({ children }) => {
   return (
     <>
       <Header>
-        <Coins>COINS</Coins>
-        <Jouhou>
+        <Left>
+          <a href="/">COINS</a>
+        </Left>
+        <Right>
           情報学群 情報科学類
           <br />
           新歓2020
-        </Jouhou>
+        </Right>
       </Header>
       {children}
       <Footer>

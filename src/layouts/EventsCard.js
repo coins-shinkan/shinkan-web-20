@@ -7,14 +7,15 @@ const Events = styled.div`
   margin: auto;
   padding-top: 10px;
   padding-bottom: 10px;
-`;
-
-const Ichiran = styled.h2`
-  margin-left: 50px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 2em;
-  text-decoration-line: underline;
+  a {
+    color: black;
+  }
+  h2 {
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
 `;
 
 const EventElement = styled.p`
@@ -25,10 +26,12 @@ const EventElement = styled.p`
 export default ({ eventList }) => {
   return (
     <Events>
-      <Ichiran>新歓行事一覧</Ichiran>
+      <a href="events">
+        <h2>新歓行事一覧</h2>
+      </a>
       {eventList.map(event => (
         <EventElement>
-          {event.date} {event.eventName}
+          {event.date} {event.name}
         </EventElement>
       ))}
     </Events>
