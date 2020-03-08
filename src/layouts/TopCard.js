@@ -29,7 +29,7 @@ const Title = styled.h3`
 `;
 
 export default ({ title, description }) => {
-  return(
+  return (
     <Card>
       <Figure />
       <Texts>
@@ -37,5 +37,5 @@ export default ({ title, description }) => {
         <p>{description}</p>
       </Texts>
     </Card>
-  )
+  );
 };

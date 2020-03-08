@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 const Events = styled.div`
   background-color: white;
@@ -23,10 +23,14 @@ const EventElement = styled.p`
 `;
 
 export default ({ eventList }) => {
-  return(
+  return (
     <Events>
       <Ichiran>新歓行事一覧</Ichiran>
-      {eventList.map(event => <EventElement>{event.date} {event.eventName}</EventElement>)}
+      {eventList.map(event => (
+        <EventElement>
+          {event.date} {event.eventName}
+        </EventElement>
+      ))}
     </Events>
   );
-}
+};

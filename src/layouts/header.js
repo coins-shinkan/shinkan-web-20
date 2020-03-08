@@ -24,6 +24,11 @@ const Jouhou = styled.p`
   line-height: 1.5em;
 `;
 
+const Body = styled.div`
+  max-width: 1000px;
+  margin: auto;
+`;
+
 const Footer = styled.div`
   background-color: gray;
   height: 80px;
@@ -31,26 +36,31 @@ const Footer = styled.div`
 `;
 
 const FooterText = styled.p`
-  margin-left: 50px;
-
+  max-width: 1000px;
+  margin: auto;
 `;
 
 const CoinsLayout = ({ children }) => {
-  return(
+  return (
     <>
       <Header>
         <Coins>COINS</Coins>
-        <Jouhou>情報学群 情報科学類<br />新歓2020</Jouhou>
+        <Jouhou>
+          情報学群 情報科学類
+          <br />
+          新歓2020
+        </Jouhou>
       </Header>
-      {children}
+      <Body>{children}</Body>
       <Footer>
         <FooterText>
-          筑波大学 情報学群 情報科学類<br />
+          筑波大学 情報学群 情報科学類
+          <br />
           茨城県つくば市天王台1-1-1
         </FooterText>
       </Footer>
     </>
-  )
+  );
 };
 
 export default CoinsLayout;

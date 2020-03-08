@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
 import CoinsLayout from "../layouts/header";
-import EventsCard from "../layouts/EventsCard"
+import EventsCard from "../layouts/EventsCard";
 import TopCard from "../layouts/TopCard";
 import { secondary } from "../lib/colors";
 
@@ -20,19 +20,22 @@ const OtherCard = styled.div`
 `;
 
 const eventList = [
-  {date: "2020-04-01", eventName: "宿舎入居"},
-  {date: "2020-04-01", eventName: "宿舎入居"},
-  {date: "2020-04-01", eventName: "宿舎入居"},
-  {date: "2020-04-01", eventName: "履修相談"},
-  {date: "2020-04-01", eventName: "学類懇親会"},
-  {date: "2020-04-01", eventName: "合宿"},
-  {date: "2020-04-03", eventName: "入学式"},
-  {date: "2020-04-04", eventName: "TOEFL"}
-]
+  { date: "2020-04-01", eventName: "宿舎入居" },
+  { date: "2020-04-01", eventName: "宿舎入居" },
+  { date: "2020-04-01", eventName: "宿舎入居" },
+  { date: "2020-04-01", eventName: "履修相談" },
+  { date: "2020-04-01", eventName: "学類懇親会" },
+  { date: "2020-04-01", eventName: "合宿" },
+  { date: "2020-04-03", eventName: "入学式" },
+  { date: "2020-04-04", eventName: "TOEFL" }
+];
 
 const events = [
-  {title: "FAQ", description: "よくある質問と回答のまとめです．"},
-  {title: "新歓委員より", description: "私たちから，新入生の皆さんへのご挨拶です．"}
+  { title: "FAQ", description: "よくある質問と回答のまとめです．" },
+  {
+    title: "新歓委員より",
+    description: "私たちから，新入生の皆さんへのご挨拶です．"
+  }
 ];
 
 export default () => (
@@ -44,7 +47,13 @@ export default () => (
       <Heading1>
         <EventsCard eventList={eventList} />
         <OtherCard>
-        {events.map(event => <TopCard key={event.title} title={event.title} description={event.description} />)}
+          {events.map(event => (
+            <TopCard
+              key={event.title}
+              title={event.title}
+              description={event.description}
+            />
+          ))}
         </OtherCard>
       </Heading1>
     </CoinsLayout>
