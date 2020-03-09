@@ -18,6 +18,9 @@ const OtherCard = styled.div`
   max-width: 1160px;
   margin: auto;
   margin-top: 30px;
+  div:first-child {
+    margin-right: 60px;
+  }
 `;
 
 const events = [

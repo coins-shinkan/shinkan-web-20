@@ -22,7 +22,7 @@ export default () => {
   return (
     <>
       <Helmet>
-        <title>Frequently asked questions</title>
+        <title>よくある質問 - COINS新歓2020</title>
       </Helmet>
       <CoinsLayout>
         <Content>

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import "normalize.css";
-import { primary } from "../lib/colors";
+import { primary, secondary } from "../lib/colors";
 
 const Header = styled.div`
   background-color: ${primary};
@@ -28,6 +28,15 @@ const Right = styled.p`
   line-height: 1.5em;
 `;
 
+const Content = styled.div`
+  background-color: ${secondary};
+  .main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 0;
+  }
+`;
+
 const Footer = styled.div`
   background-color: gray;
   height: 80px;
@@ -52,7 +61,9 @@ const CoinsLayout = ({ children }) => {
           新歓2020
         </Right>
       </Header>
-      {children}
+      <Content>
+        <div className="main">{children}</div>
+      </Content>
       <Footer>
         <FooterText>
           筑波大学 情報学群 情報科学類

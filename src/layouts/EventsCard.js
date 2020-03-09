@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Events = styled.div`
   background-color: white;
-  max-width: 1100px;
+  width: 100%;
   margin: auto;
   padding-top: 10px;
   padding-bottom: 10px;
