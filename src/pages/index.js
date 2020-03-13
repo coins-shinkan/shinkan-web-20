@@ -1,17 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Helmet from "react-helmet";
+import React from 'react';
+import Layout from '../components/Layout/Layout';
 
-const Heading1 = styled.h1`
-  color: blue;
-`;
 export default () => (
-  <>
-    <Helmet>
-      <title>つくばだいがく</title>
-    </Helmet>
-    <Heading1>
-      つくばだいがくじょうほうがくぐんじょうほうかがくるいしんかん2020
-    </Heading1>
-  </>
+    <Layout>
+      
+    </Layout>
 );
