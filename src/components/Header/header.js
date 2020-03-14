@@ -7,7 +7,9 @@ const HeaderRoot = styled.div`
   background: ${Color.PRIMARY};
   padding-top: 1.3rem;
   text-align: center;
-  margin: -1rem;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  margin-top: -1rem;
 `;
 
 const CoinsLogo = styled.div`

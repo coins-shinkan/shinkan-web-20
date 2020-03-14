@@ -4,10 +4,9 @@ import Helmet from "react-helmet";
 import styled from "styled-components";
 
 const PageBody = styled.div`
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-right: 5rem;
-  margin-left: 5rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 `;
 
 export default ({ children }) => (
