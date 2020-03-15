@@ -5,9 +5,10 @@ import Color from "../const/Color";
 
 const Page = styled.div`
   display: inline-block;
-  width: 50rem;
+  max-width: 50rem;
   background: ${Color.SECONDARY};
   padding: 1rem;
+  height: 100%;
 `;
 
 const Heading1 = styled.h1`

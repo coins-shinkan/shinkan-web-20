@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Header/Header";
 import Helmet from "react-helmet";
 import styled from "styled-components";
+import Footer from "../Footer/footer";
 
 const PageBody = styled.div`
   align-items: center;
@@ -9,12 +10,21 @@ const PageBody = styled.div`
   justify-content: center;
 `;
 
+const Wrapper = styled.div`
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+`;
+
 export default ({ children }) => (
   <>
     <Helmet>
       <title>筑波大学</title>
     </Helmet>
-    <Header />
-    <PageBody>{children}</PageBody>
+    <Wrapper>
+      <Header />
+      <PageBody>{children}</PageBody>
+      <Footer />
+    </Wrapper>
   </>
 );
