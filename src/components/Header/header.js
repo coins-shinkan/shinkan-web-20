@@ -5,12 +5,7 @@ import styled from "styled-components";
 const HeaderRoot = styled.div`
   color: ${Color.WHITE};
   background: ${Color.PRIMARY};
-  padding-top: 1.3rem;
   text-align: center;
-  margin-right: -1rem;
-  margin-left: -1rem;
-  margin-top: -1rem;
-  margin-bottom: 1rem;
 `;
 
 const CoinsLogo = styled.div`

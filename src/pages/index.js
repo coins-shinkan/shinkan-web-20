@@ -2,12 +2,13 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
 import Color from "../const/Color";
+import TopCard from "../components/Layout/TopCard";
 
 const Page = styled.div`
   display: inline-block;
+  width: 96vw;
   max-width: 50rem;
   background: ${Color.SECONDARY};
-  padding: 1rem;
   height: 100%;
 `;
 
@@ -16,21 +17,48 @@ const Heading1 = styled.h1`
   color: ${Color.WHITE};
 `;
 
-const Paragraph = styled.p`
-  display: block;
-  color: ${Color.WHITE};
+const Cards = styled.div`
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 `;
+
+const contents = [
+  {
+    title: "新歓行事一覧",
+    description: "入学前後にある行事です。",
+    link: "events"
+  },
+  {
+    title: "FAQ",
+    description: "よくある質問と回答のまとめです。",
+    link: "faq"
+  },
+  {
+    title: "新歓委員より",
+    description: "私たちから、新入生の皆さんへのごあいさつです。",
+    link: "about"
+  }
+];
 
 export default () => (
   <Layout>
     <Page>
       <Heading1>筑波大学へようこそ！</Heading1>
-      <Paragraph>筑波大学とは、つくばにある大学です。</Paragraph>
-      <Paragraph>
-        つくばにあるので、筑波大学という名前です。ご理解のほど、よろしくお願いします。
-      </Paragraph>
-      <Paragraph>ちなみに、つくばにはさまざまな大学が存在します。</Paragraph>
-      <Paragraph>その一つが、筑波大学です。</Paragraph>
+      <Cards>
+        {contents.map(contents => (
+          <TopCard
+            key={contents.title}
+            title={contents.title}
+            description={contents.description}
+            link={contents.link}
+          />
+        ))}
+      </Cards>
     </Page>
   </Layout>
 );

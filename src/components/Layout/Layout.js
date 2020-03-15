@@ -11,9 +11,12 @@ const PageBody = styled.div`
 `;
 
 const Wrapper = styled.div`
-  min-height: 100vh;
+  height: auto;
+  min-height: 97.9vh;
+  width: auto;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  margin: -0.5rem;
 `;
 
 export default ({ children }) => (
