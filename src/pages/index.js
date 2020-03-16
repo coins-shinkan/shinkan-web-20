@@ -47,7 +47,6 @@ export default () => (
         <OtherCard>
           {events.map(event => (
             <TopCard
-              key={event.title}
               title={event.title}
               description={event.description}
               link={event.link}

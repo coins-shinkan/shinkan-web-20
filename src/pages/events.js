@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Helmet from "react-helmet";
 import CoinsLayout from "../layouts/CoinsLayout";
 import eventList from "../contents/eventList.json";
+import { graphql } from "gatsby";
 
 const Content = styled.div`
   display: flex;
@@ -19,11 +20,26 @@ const EventMenu = styled.div`
 const EventDescription = styled.div`
   background-color: white;
   width: 75%;
+  padding: 10px 30px;
 `;
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          html
+        }
+      }
+    }
+  }
+`;
+
+let nowPage = 0;
 
 function toggleEvents() {}
 
-export default () => {
+export default ({ data }) => {
   return (
     <>
       <Helmet>
@@ -36,9 +52,11 @@ export default () => {
               <p>{event.name}</p>
             ))}
           </EventMenu>
-          <EventDescription>
-            <p>イベントだよ</p>
-          </EventDescription>
+          <EventDescription
+            dangerouslySetInnerHTML={{
+              __html: data.allMarkdownRemark.edges[nowPage].node.html
+            }}
+          />
         </Content>
       </CoinsLayout>
     </>
