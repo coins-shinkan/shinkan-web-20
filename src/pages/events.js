@@ -16,7 +16,7 @@ const EventMenu = styled.div`
   padding: 10px;
   padding-right: 0;
   margin-right: 5%;
-  p{
+  p {
     margin: 30px 0;
     line-height: 1.4em;
   }
@@ -26,20 +26,20 @@ const EventDescription = styled.div`
   background-color: white;
   width: 75%;
   padding: 10px 30px;
-  .articleHead{
+  .articleHead {
     display: flex;
     align-items: baseline;
   }
-  .title{
+  .title {
     font-size: 2.5em;
     margin: 20px 0;
   }
-  .date{
+  .date {
     text-align: right;
     width: fit-content;
     margin-left: auto;
   }
-  hr{
+  hr {
     margin-bottom: 40px;
   }
 `;
@@ -50,7 +50,7 @@ const ToggleButton = styled.div`
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: {order: ASC, fields: [frontmatter___date]}) {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
       edges {
         node {
           frontmatter {
@@ -79,7 +79,12 @@ export default ({ data }) => {
         <Content>
           <EventMenu>
             {edges.map(edge => (
-              <p> {edge.node.frontmatter.date}<br />{edge.node.frontmatter.title}</p>
+              <p>
+                {" "}
+                {edge.node.frontmatter.date}
+                <br />
+                {edge.node.frontmatter.title}
+              </p>
             ))}
           </EventMenu>
           <EventDescription>
@@ -88,14 +93,14 @@ export default ({ data }) => {
               <h4 className="date">{edges[nowPage].node.frontmatter.date}</h4>
             </div>
             <hr />
-            <div dangerouslySetInnerHTML={{
-              __html: data.allMarkdownRemark.edges[nowPage].node.html
-            }} />
+            <div
+              dangerouslySetInnerHTML={{
+                __html: data.allMarkdownRemark.edges[nowPage].node.html
+              }}
+            />
           </EventDescription>
         </Content>
-        <Content>
-          
-        </Content>
+        <Content></Content>
       </CoinsLayout>
     </>
   );
