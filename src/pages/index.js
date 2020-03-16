@@ -3,14 +3,8 @@ import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
 import Color from "../const/Color";
 import TopCard from "../components/Layout/TopCard";
-
-const Page = styled.div`
-  display: inline-block;
-  width: 96vw;
-  max-width: 50rem;
-  background: ${Color.SECONDARY};
-  height: 100%;
-`;
+import azarashi from "../imgs/azarashi.png";
+import Page from "../styles/page";
 
 const Heading1 = styled.h1`
   diaplay: block;
@@ -31,24 +25,26 @@ const contents = [
   {
     title: "新歓行事一覧",
     description: "入学前後にある行事です。",
-    link: "events"
+    link: "events",
+    img: { azarashi }
   },
   {
     title: "FAQ",
     description: "よくある質問と回答のまとめです。",
-    link: "faq"
+    link: "faq",
+    img: { azarashi }
   },
   {
     title: "新歓委員より",
     description: "私たちから、新入生の皆さんへのごあいさつです。",
-    link: "about"
+    link: "about",
+    img: { azarashi }
   }
 ];
 
 export default () => (
   <Layout>
     <Page>
-      <Heading1>筑波大学へようこそ！</Heading1>
       <Cards>
         {contents.map(contents => (
           <TopCard
@@ -56,6 +52,7 @@ export default () => (
             title={contents.title}
             description={contents.description}
             link={contents.link}
+            img={contents.img}
           />
         ))}
       </Cards>

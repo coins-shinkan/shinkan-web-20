@@ -4,7 +4,8 @@ import Color from "../../const/Color";
 
 const FooterRoot = styled.div`
   background: ${Color.FOOTER};
-  min-height: 3em;
+  height: 100%;
+  padding-bottom: 1rem;
 `;
 
 export default () => <FooterRoot>hogehoge</FooterRoot>;
