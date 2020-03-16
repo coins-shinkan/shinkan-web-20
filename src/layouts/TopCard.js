@@ -25,6 +25,7 @@ const Description = styled.p`
 const Img = styled.img`
   height: 5rem;
   position: relative;
+  min-width-7rem;
 `;
 const Wrapper = styled.div`
   height: 100%;
@@ -35,7 +36,7 @@ const Wrapper = styled.div`
 
 export default ({ title, description, link, img }) => {
   return (
-    <Card>
+    <Card href={link}>
       <Link href={link}>
         <Img src={img} />
         <Wrapper>
