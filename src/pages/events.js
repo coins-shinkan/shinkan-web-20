@@ -72,15 +72,17 @@ class Events extends React.Component {
   }
   incPage() {
     if (
-      this.state.nowPage + 2 <
+      this.state.nowPage + 1 <
       this.props.data.allMarkdownRemark.edges.length
     ) {
       this.setState({ nowPage: this.state.nowPage + 1 });
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
   }
   decPage() {
     if (this.state.nowPage > 0) {
       this.setState({ nowPage: this.state.nowPage - 1 });
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
   }
   render() {
