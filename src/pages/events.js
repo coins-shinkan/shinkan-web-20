@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
 import CoinsLayout from "../layouts/CoinsLayout";
-import eventList from "../contents/eventList.json";
 import { graphql } from "gatsby";
 
 const Content = styled.div`
@@ -44,7 +43,7 @@ const EventDescription = styled.div`
   }
 `;
 
-const ToggleButton = styled.div`
+const ToggleButton = styled.button`
   background-color: white;
 `;
 
@@ -64,44 +63,82 @@ export const query = graphql`
   }
 `;
 
-let nowPage = 0;
-
-function toggleEvents() {}
-
-export default ({ data }) => {
-  const edges = data.allMarkdownRemark.edges;
-  return (
-    <>
-      <Helmet>
-        <title>新歓行事一覧 - COINS新歓2020</title>
-      </Helmet>
-      <CoinsLayout>
-        <Content>
-          <EventMenu>
-            {edges.map(edge => (
-              <p>
-                {" "}
-                {edge.node.frontmatter.date}
-                <br />
-                {edge.node.frontmatter.title}
-              </p>
-            ))}
-          </EventMenu>
-          <EventDescription>
-            <div className="articleHead">
-              <h1 className="title">{edges[nowPage].node.frontmatter.title}</h1>
-              <h4 className="date">{edges[nowPage].node.frontmatter.date}</h4>
-            </div>
-            <hr />
-            <div
-              dangerouslySetInnerHTML={{
-                __html: data.allMarkdownRemark.edges[nowPage].node.html
+class Events extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      nowPage: 0
+    };
+  }
+  incPage() {
+    if (
+      this.state.nowPage + 2 <
+      this.props.data.allMarkdownRemark.edges.length
+    ) {
+      this.setState({ nowPage: this.state.nowPage + 1 });
+    }
+  }
+  decPage() {
+    if (this.state.nowPage > 0) {
+      this.setState({ nowPage: this.state.nowPage - 1 });
+    }
+  }
+  render() {
+    const edges = this.props.data.allMarkdownRemark.edges;
+    return (
+      <>
+        <Helmet>
+          <title>新歓行事一覧 - COINS新歓2020</title>
+        </Helmet>
+        <CoinsLayout>
+          <Content>
+            <EventMenu>
+              {edges.map(edge => (
+                <p>
+                  {" "}
+                  {edge.node.frontmatter.date}
+                  <br />
+                  {edge.node.frontmatter.title}
+                </p>
+              ))}
+            </EventMenu>
+            <EventDescription>
+              <div className="articleHead">
+                <h1 className="title">
+                  {edges[this.state.nowPage].node.frontmatter.title}
+                </h1>
+                <h4 className="date">
+                  {edges[this.state.nowPage].node.frontmatter.date}
+                </h4>
+              </div>
+              <hr />
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: edges[this.state.nowPage].node.html
+                }}
+              />
+            </EventDescription>
+          </Content>
+          <Content>
+            <button
+              onClick={() => {
+                this.decPage();
               }}
-            />
-          </EventDescription>
-        </Content>
-        <Content></Content>
-      </CoinsLayout>
-    </>
-  );
-};
+            >
+              前へ
+            </button>
+            <button
+              onClick={() => {
+                this.incPage();
+              }}
+            >
+              次へ
+            </button>
+          </Content>
+        </CoinsLayout>
+      </>
+    );
+  }
+}
+
+export default Events;
