@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Color from "../../const/Color";
+import Color from "../const/Color";
 
 const Card = styled.div`
   background-color: ${Color.WHITE};
@@ -24,15 +24,24 @@ const Description = styled.p`
 
 const Img = styled.img`
   height: 5rem;
+  position: relative;
+`;
+const Wrapper = styled.div`
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  top: -1rem;
 `;
 
 export default ({ title, description, link, img }) => {
   return (
     <Card>
       <Link href={link}>
-        <Title>{title}</Title>
         <Img src={img} />
-        <Description>{description}</Description>
+        <Wrapper>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
+        </Wrapper>
       </Link>
     </Card>
   );

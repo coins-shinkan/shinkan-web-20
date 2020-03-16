@@ -8,7 +8,7 @@ const Index = styled.div`
   width: 15rem;
   background: ${Color.SECONDARY};
   height: 100%;
-  margin-right: 2rem;
+  margin-right: 1rem;
 `;
 
 const Page = styled.div`
