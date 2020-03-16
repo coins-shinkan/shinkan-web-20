@@ -1,15 +1,9 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
-import Color from "../const/Color";
 import TopCard from "../components/Layout/TopCard";
 import azarashi from "../imgs/azarashi.png";
 import Page from "../styles/page";
-
-const Heading1 = styled.h1`
-  diaplay: block;
-  color: ${Color.WHITE};
-`;
 
 const Cards = styled.div`
   margin: auto;
