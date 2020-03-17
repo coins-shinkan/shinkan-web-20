@@ -1,5 +1,5 @@
 ---
-path: "articles"
+path: "/preparty"
 title: "入学前食事会"
 date: "2020-04-04"
 ---

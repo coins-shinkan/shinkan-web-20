@@ -1,5 +1,5 @@
 ---
-path: "articles"
+path: "/ichinoya"
 title: "宿舎入居(一の矢)"
 date: "2020-04-04"
 ---

@@ -1,5 +1,5 @@
 ---
-path: "/articles"
+path: "/toefl"
 title: "プレイスメントテスト"
 date: "2020-04-06"
 ---

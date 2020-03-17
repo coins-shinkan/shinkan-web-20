@@ -1,5 +1,5 @@
 ---
-path: "/articles"
+path: "/consult"
 title: "履修相談会"
 date: "2020-04-11, 12"
 ---

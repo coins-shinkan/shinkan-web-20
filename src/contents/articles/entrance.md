@@ -1,5 +1,5 @@
 ---
-path: "/articles"
+path: "/entrance"
 date: "2020-04-05"
 title: "入学式"
 ---

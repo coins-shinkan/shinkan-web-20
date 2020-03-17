@@ -1,5 +1,5 @@
 ---
-path: "/articles"
+path: "/infoparty"
 title: "学群懇親会"
 date: "2020-04-19"
 ---

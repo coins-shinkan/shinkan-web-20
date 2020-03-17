@@ -1,5 +1,5 @@
 ---
-path: "/articles"
+path: "/trip"
 title: "日帰り合宿"
 date: "2020-04-07"
 ---
