@@ -5,7 +5,7 @@ import CoinsLayout from "../layouts/CoinsLayout";
 import EventsCard from "../layouts/EventsCard";
 import TopCard from "../layouts/TopCard";
 import { secondary } from "../lib/colors";
-import eventList from "../contents/eventList.json";
+import { graphql } from "gatsby";
 
 const Heading1 = styled.div`
   background-color: ${secondary};
@@ -36,24 +36,42 @@ const events = [
   }
 ];
 
-export default () => (
-  <>
-    <Helmet>
-      <title>COINS新歓2020</title>
-    </Helmet>
-    <CoinsLayout>
-      <Heading1>
-        <EventsCard eventList={eventList} />
-        <OtherCard>
-          {events.map(event => (
-            <TopCard
-              title={event.title}
-              description={event.description}
-              link={event.link}
-            />
-          ))}
-        </OtherCard>
-      </Heading1>
-    </CoinsLayout>
-  </>
-);
+export default ({data}) => {
+  return (
+    <>
+      <Helmet>
+        <title>COINS新歓2020</title>
+      </Helmet>
+      <CoinsLayout>
+        <Heading1>
+          <EventsCard data={data}/>
+          <OtherCard>
+            {events.map(event => (
+              <TopCard
+                title={event.title}
+                description={event.description}
+                link={event.link}
+              />
+            ))}
+          </OtherCard>
+        </Heading1>
+      </CoinsLayout>
+    </>
+  );
+};
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date
+            path
+          }
+        }
+      }
+    }
+  }
+`;

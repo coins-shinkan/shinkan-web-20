@@ -23,17 +23,20 @@ const EventElement = styled.p`
   font-size: 1.7em;
 `;
 
-export default ({ eventList }) => {
+export default ({ data }) => {
+  const eventList = data.allMarkdownRemark.edges;
   return (
     <Events>
-      <a href="events">
-        <h2>新歓行事一覧</h2>
-      </a>
+      <h2>新歓行事一覧</h2>
       {eventList.map(event => (
         <EventElement>
-          {event.date} {event.name}
+          {event.node.frontmatter.date.padEnd(18, " ")}
+          <a href={event.node.frontmatter.path}>
+            {event.node.frontmatter.title}
+          </a>
         </EventElement>
       ))}
     </Events>
   );
 };
+

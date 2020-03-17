@@ -54,12 +54,16 @@ export default ({ data }) => {
       <CoinsLayout>
         <Content>
           <EventMenu>
-            {eventList.forEach(event => {
-              <p>
-                {event.node.frontmatter.title}
-                <br />
-                {event.node.frontmatter.date}
-              </p>
+            {eventList.map(event => {
+              return (
+                <p>
+                  {event.node.frontmatter.date}
+                  <br />
+                  <a href={event.node.frontmatter.path}>
+                    {event.node.frontmatter.title}
+                  </a>
+                </p>
+              );
             })}
           </EventMenu>
           <EventDescription>
