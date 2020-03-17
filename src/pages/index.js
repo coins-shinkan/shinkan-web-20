@@ -4,23 +4,26 @@ import styled from "styled-components";
 import TopCard from "../layouts/TopCard";
 import azarashi from "../imgs/azarashi.png";
 import Page from "../styles/page";
+import Media from "../const/Media";
 
 const Cards = styled.div`
-  margin: auto;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  width: 100%;
+  justify-content: center;
+  ${Media.MOBILE} {
+    display: block;
+  }
 `;
 
+const events = {
+  title: "新歓行事一覧",
+  description: "入学前後にある行事です。",
+  link: "events",
+  img: azarashi
+};
+
 const contents = [
-  {
-    title: "新歓行事一覧",
-    description: "入学前後にある行事です。",
-    link: "events",
-    img: azarashi
-  },
   {
     title: "FAQ",
     description: "よくある質問と回答のまとめです。",
@@ -38,6 +41,15 @@ const contents = [
 export default () => (
   <Layout>
     <Page>
+      <Cards>
+        <TopCard
+          key={events.title}
+          title={events.title}
+          description={events.description}
+          link={events.link}
+          img={events.img}
+        />
+      </Cards>
       <Cards>
         {contents.map(contents => (
           <TopCard

@@ -3,11 +3,13 @@ import Header from "../Header/header";
 import Helmet from "react-helmet";
 import styled from "styled-components";
 import Footer from "../Footer/footer";
+import Color from "../../const/Color";
 
 const PageBody = styled.div`
   align-items: center;
-  display: flex;
+  display: grid;
   justify-content: center;
+  background: ${Color.SECONDARY};
 `;
 
 const Wrapper = styled.div`
@@ -22,7 +24,7 @@ const Wrapper = styled.div`
 export default ({ children }) => (
   <>
     <Helmet>
-      <title>筑波大学</title>
+      <title>coins新歓 2020</title>
     </Helmet>
     <Wrapper>
       <Header />
