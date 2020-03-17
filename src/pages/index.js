@@ -36,7 +36,7 @@ const events = [
   }
 ];
 
-export default ({data}) => {
+export default ({ data }) => {
   return (
     <>
       <Helmet>
@@ -44,7 +44,7 @@ export default ({data}) => {
       </Helmet>
       <CoinsLayout>
         <Heading1>
-          <EventsCard data={data}/>
+          <EventsCard data={data} />
           <OtherCard>
             {events.map(event => (
               <TopCard
