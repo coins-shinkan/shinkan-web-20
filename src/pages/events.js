@@ -2,11 +2,15 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
 import Color from "../const/Color";
+import Media from "../const/Media";
 
 const Page = styled.div`
-  display: in;
+  display: flex;
+  width: 100vw;
   height: 100%;
-  background: #99ff99;
+  ${Media.MOBILE} {
+    display: grid;
+  }
 `;
 
 const Index = styled.div`
@@ -14,13 +18,28 @@ const Index = styled.div`
   height: 100%;
   background: ${Color.WHITE};
   float: left;
+  padding: 1rem;
+  ${Media.MOBILE} {
+    order: 1;
+    text-align: center;
+  }
 `;
-const Content = styled.div`
+const Contents = styled.div`
   display: block;
-  align-items: center;
-  width: 70%;
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 80rem;
   background: ${Color.WHITE};
+  padding: 1rem;
+  ${Media.MOBILE} {
+    order: 0;
+  }
+`;
+
+const Content = styled.div`
+  display block;
+  padding-bottom: 1rem;
 `;
 
 const IndexEvent = styled.div`
@@ -97,7 +116,16 @@ export default () => (
           </IndexEvent>
         ))}
       </Index>
-      <Content>bb</Content>
+      <Contents>
+        {events.map(events => (
+          <Content>
+            <h2>{events.title}</h2>
+            {events.description.map(description => (
+              <p>{description}</p>
+            ))}
+          </Content>
+        ))}
+      </Contents>
     </Page>
   </Layout>
 );
