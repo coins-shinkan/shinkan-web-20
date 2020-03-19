@@ -4,7 +4,6 @@ import Color from "../const/Color";
 import Media from "../const/Media";
 
 const Card = styled.div`
-  display: grid;
   grid-auto-rows: 14rem;
   background-color: ${Color.WHITE};
   width: 100%;
