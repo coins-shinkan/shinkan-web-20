@@ -3,8 +3,12 @@ import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
 import TopCard from "../layouts/TopCard";
 import azarashi from "../imgs/azarashi.png";
-import Page from "../styles/page";
 import Media from "../const/Media";
+
+const Page = styled.div`
+  display: inline-block;
+  height: 100%;
+`;
 
 const Cards = styled.div`
   display: flex;
