@@ -2,8 +2,10 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
 import TopCard from "../layouts/TopCard";
+import EventsCard from "../layouts/EventsCard";
 import azarashi from "../imgs/azarashi.png";
 import Media from "../const/Media";
+import { graphql } from "gatsby";
 
 const Page = styled.div`
   display: inline-block;
@@ -20,13 +22,6 @@ const Cards = styled.div`
   }
 `;
 
-const events = {
-  title: "新歓行事一覧",
-  description: "入学前後にある行事です。",
-  link: "events",
-  img: azarashi
-};
-
 const contents = [
   {
     title: "FAQ",
@@ -42,17 +37,11 @@ const contents = [
   }
 ];
 
-export default () => (
+export default ({ data }) => (
   <Layout>
     <Page>
       <Cards>
-        <TopCard
-          key={events.title}
-          title={events.title}
-          description={events.description}
-          link={events.link}
-          img={events.img}
-        />
+        <EventsCard data={data} />
       </Cards>
       <Cards>
         {contents.map(contents => (
@@ -68,3 +57,19 @@ export default () => (
     </Page>
   </Layout>
 );
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date
+            path
+          }
+        }
+      }
+    }
+  }
+`;
