@@ -24,14 +24,13 @@ const Contents = styled.div`
 
 const Content = styled.div`
   padding: 0.8rem;
-`;
-
-const Question = styled.p`
-  font-size: 1.8rem;
-`;
-
-const Answer = styled.p`
-  font-size: 1.5rem;
+  border-bottom: medium dashed ${Color.SECONDARY};
+  .question {
+    font-size: 1.8rem;
+  }
+  .answer {
+    font-size: 1.6rem;
+  }
 `;
 
 const faqs = [
@@ -55,8 +54,8 @@ export default () => (
       <Contents>
         {faqs.map(faq => (
           <Content>
-            <Question>Q: {faq.question}</Question>
-            <Answer>A: {faq.answer}</Answer>
+            <p className="question">Q: {faq.question}</p>
+            <p className="answer">A: {faq.answer}</p>
           </Content>
         ))}
       </Contents>

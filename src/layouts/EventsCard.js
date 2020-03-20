@@ -8,6 +8,10 @@ const Events = styled.div`
   grid-auto-rows: 14rem;
   margin: 1rem;
   padding: 1rem;
+  width: 100%;
+  ${Media.MOBILE} {
+    width: auto;
+  }
   a {
     color: black;
   }
