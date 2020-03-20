@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Color from "../../const/Color";
+import Media from "../../const/Media";
 
 const FooterRoot = styled.div`
   background: ${Color.FOOTER};
@@ -14,6 +15,11 @@ const Wrapper = styled.div`
   width: 100%;
   padding-top: 1rem;
   padding-left: 1rem;
+  p {
+    ${Media.MOBILE} {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export default () => (
