@@ -3,28 +3,55 @@ import styled from "styled-components";
 import Helmet from "react-helmet";
 import Layout from "../components/Layout/Layout";
 import { graphql } from "gatsby";
+import Media from "../const/Media";
+import Color from "../const/Color";
 
 const Content = styled.div`
   display: flex;
+  width: 100vw;
+  height: 100%;
+  ${Media.MOBILE} {
+    display: grid;
+  }
 `;
 
 const EventMenu = styled.div`
-  background-color: white;
-  width: 20%;
-  /* height: fit-content; */
-  padding: 10px;
-  padding-right: 0;
-  margin-right: 5%;
+  height: 100%;
+  background: ${Color.WHITE};
+  float: left;
+  padding: 1rem;
+  ${Media.MOBILE} {
+    order: 1;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 90%;
+    max-width: 80rem;
+    display: inline-block;
+  }
   p {
     margin: 30px 0;
     line-height: 1.4em;
+    ${Media.MOBILE} {
+      margin: 0;
+      display: block;
+    }
   }
 `;
 
 const EventDescription = styled.div`
-  background-color: white;
-  width: 75%;
-  padding: 10px 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 80rem;
+  background: ${Color.WHITE};
+  padding: 1rem;
+  ${Media.MOBILE} {
+    width: auto;
+    order: 0;
+  }
   .articleHead {
     display: flex;
     align-items: baseline;

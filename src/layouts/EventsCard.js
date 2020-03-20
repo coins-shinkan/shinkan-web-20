@@ -4,6 +4,9 @@ import Color from "../const/Color";
 import Media from "../const/Media";
 
 const Events = styled.div`
+  display: block;
+  text-decoration: none;
+  color: ${Color.BLACK};
   background-color: ${Color.WHITE};
   grid-auto-rows: 14rem;
   margin: 1rem;
@@ -36,7 +39,7 @@ const EventElement = styled.p`
 export default ({ data }) => {
   const eventList = data.allMarkdownRemark.edges;
   return (
-    <Events>
+    <Events href>
       <h2>新歓行事一覧</h2>
       {eventList.map(event => (
         <EventElement>
