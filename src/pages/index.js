@@ -13,6 +13,7 @@ const Page = styled.div`
 `;
 
 const Cards = styled.div`
+  max-width: 76rem;
   display: flex;
   align-items: center;
   width: 100%;

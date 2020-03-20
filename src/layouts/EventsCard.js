@@ -1,26 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import Color from "../const/Color";
+import Media from "../const/Media";
 
 const Events = styled.div`
-  background-color: white;
-  width: 100%;
-  margin: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background-color: ${Color.WHITE};
+  grid-auto-rows: 14rem;
+  margin: 1rem;
+  padding: 1rem;
   a {
     color: black;
   }
   h2 {
-    margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 2em;
+    font-size: 2rem;
+    ${Media.MOBILE} {
+      font-size: 1.7rem;
+    }
   }
 `;
 
 const EventElement = styled.p`
-  margin-left: 50px;
-  font-size: 1.7em;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+  ${Media.MOBILE} {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+  }
 `;
 
 export default ({ data }) => {

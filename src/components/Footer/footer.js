@@ -12,6 +12,8 @@ const FooterRoot = styled.div`
 const Wrapper = styled.div`
   font-size: 1.2rem;
   width: 100%;
+  padding-top: 1rem;
+  padding-left: 1rem;
 `;
 
 export default () => (
@@ -19,10 +21,6 @@ export default () => (
     <Wrapper>
       <p>筑波大学 情報学群 情報科学類</p>
       <p>茨城県つくば市天王台1-1-1</p>
-    </Wrapper>
-    <Wrapper>
-      <p>hogehoge</p>
-      <p>piyopiyo</p>
     </Wrapper>
   </FooterRoot>
 );

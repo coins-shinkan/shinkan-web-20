@@ -4,19 +4,23 @@ import Color from "../const/Color";
 import Media from "../const/Media";
 
 const Card = styled.div`
+  display: grid;
   grid-auto-rows: 14rem;
   background-color: ${Color.WHITE};
   width: 100%;
   margin: 1rem;
   padding: 1rem;
   ${Media.MOBILE} {
-    display: block;
     width: auto;
   }
 `;
 
 const Title = styled.h2`
   color: ${Color.BLACK};
+  font-size: 2rem;
+  ${Media.MOBILE} {
+    font-size: 1.5rem;
+  }
 `;
 
 const Link = styled.a`
@@ -31,6 +35,10 @@ const Link = styled.a`
 
 const Description = styled.p`
   color: ${Color.BLACK};
+  font-size: 1.3rem;
+  ${Media.MOBILE} {
+    font-size: 1.3rem;
+  }
 `;
 
 const Img = styled.img`
@@ -49,7 +57,6 @@ const Wrapper = styled.div`
   vertical-align: top;
   top: -1rem;
   ${Media.MOBILE} {
-    display: block;
     width: auto;
   }
   ${Media.TABLET} {
