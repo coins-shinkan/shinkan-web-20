@@ -10,10 +10,13 @@ const Events = styled.div`
   background-color: ${Color.WHITE};
   grid-auto-rows: 14rem;
   margin: 1rem;
-  padding: 1rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  padding-right: 2rem;
   width: 100%;
   ${Media.MOBILE} {
     width: auto;
+    padding: 1rem;
   }
   a {
     color: black;
@@ -33,6 +36,9 @@ const EventElement = styled.p`
   ${Media.MOBILE} {
     font-size: 1rem;
     margin-top: 0.2rem;
+  }
+  :hover {
+    background-color: ${Color.SECONDARY};
   }
 `;
 
