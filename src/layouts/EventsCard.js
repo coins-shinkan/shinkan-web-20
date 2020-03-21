@@ -39,6 +39,7 @@ const EventElement = styled.a`
   margin-bottom: 0;
   margin-top: 0.5rem;
   border-bottom: medium dashed ${Color.SECONDARY};
+  white-space: pre;
   ${Media.MOBILE} {
     font-size: 1rem;
     margin-top: 0.2rem;
@@ -55,7 +56,7 @@ export default ({ data }) => {
       <h2>新歓行事一覧</h2>
       {eventList.map(event => (
         <EventElement href={event.node.frontmatter.path}>
-          {event.node.frontmatter.date.padEnd(18, " ")}
+          ・ {event.node.frontmatter.date.padEnd(20, " ")}
           {event.node.frontmatter.title}
         </EventElement>
       ))}
