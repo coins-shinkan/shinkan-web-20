@@ -20,6 +20,12 @@ const EventMenu = styled.div`
   background: ${Color.WHITE};
   float: left;
   padding: 1rem;
+  p:hover {
+    background-color: ${Color.SECONDARY};
+  }
+  p {
+    border-bottom: medium dashed ${Color.SECONDARY};
+  }
   ${Media.MOBILE} {
     order: 1;
     float: none;
@@ -49,24 +55,35 @@ const EventDescription = styled.div`
   background: ${Color.WHITE};
   padding: 1rem;
   ${Media.MOBILE} {
-    width: auto;
+    width: 100%;
     order: 0;
   }
   .articleHead {
     display: flex;
     align-items: baseline;
+    ${Media.MOBILE} {
+      display: block;
+    }
   }
   .title {
     font-size: 2.5em;
     margin: 20px 0;
+    ${Media.MOBILE} {
+      margin: 0;
+    }
   }
   .date {
     text-align: right;
     width: fit-content;
     margin-left: auto;
+    ${Media.MOBILE} {
+      text-align: left;
+      margin: 0;
+      margin-left: 0.5rem;
+    }
   }
   hr {
-    margin-bottom: 40px;
+    margin-bottom: 1rem;;
   }
 `;
 
