@@ -83,7 +83,7 @@ const EventDescription = styled.div`
     }
   }
   hr {
-    margin-bottom: 1rem;;
+    margin-bottom: 1rem;
   }
 `;
 
