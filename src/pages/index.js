@@ -10,6 +10,7 @@ import { graphql } from "gatsby";
 const Page = styled.div`
   display: inline-block;
   height: 100%;
+  margin-top: 2rem;
 `;
 
 const Cards = styled.div`
