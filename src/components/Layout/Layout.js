@@ -19,12 +19,17 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
   margin: -0.5rem;
+  font-family: "Noto Sans JP", sans-serif;
 `;
 
 export default ({ children }) => (
   <>
     <Helmet>
       <title>coins新歓 2020</title>
+      <link
+        href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"
+        rel="stylesheet"
+      ></link>
     </Helmet>
     <Wrapper>
       <Header />

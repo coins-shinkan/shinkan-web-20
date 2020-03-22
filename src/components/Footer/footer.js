@@ -18,6 +18,7 @@ const Wrapper = styled.div`
   p {
     ${Media.MOBILE} {
       font-size: 1rem;
+      margin: 0.2rem;
     }
   }
 `;
@@ -25,7 +26,8 @@ const Wrapper = styled.div`
 export default () => (
   <FooterRoot>
     <Wrapper>
-      <p>筑波大学 情報学群 情報科学類</p>
+      <p>筑波大学</p>
+      <p>情報学群 情報科学類</p>
       <p>茨城県つくば市天王台1-1-1</p>
     </Wrapper>
   </FooterRoot>
