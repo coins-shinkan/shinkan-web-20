@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
 import Color from "../const/Color";
 import Media from "../const/Media";
+import contents from "../contents/about.json";
 
 const Contents = styled.div`
   height: 100%;
@@ -25,24 +26,6 @@ const Page = styled.div`
   max-width: 70rem;
   flex-direction: column;
 `;
-
-const contents = [
-  {
-    title: "委員長お気持ち表明",
-    paragraphs: [
-      "初春の候、新入生の皆様におかれましてはますますご健勝のことと存じます。",
-      "皆様におかれましては、キモ・インターネッツを差し控えるよう、お願い申し上げます。"
-    ]
-  },
-  {
-    title: "委員長のお言葉",
-    paragraphs: [
-      "初春の候、新入生の皆様におかれましてはますますご健勝のことと存じます。",
-      "ああああああああああああああああああああああああああああああああああああ",
-      "ああああああああああああああああああああああああああああああああああああaaaa"
-    ]
-  }
-];
 
 export default () => (
   <Layout>

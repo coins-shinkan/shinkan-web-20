@@ -28,6 +28,10 @@ const EventMenu = styled.div`
     text-decoration: none;
     display: block;
     padding-top: 0.5rem;
+    color: ${Color.BLACK};
+  }
+  a:visited {
+    color: ${Color.BLACK};
   }
   ${Media.MOBILE} {
     order: 1;

@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
 import Color from "../const/Color";
 import Media from "../const/Media";
+import faqs from "../contents/faq.json";
 
 const Page = styled.div`
   display: flex;
@@ -20,6 +21,10 @@ const Contents = styled.div`
   ${Media.MOBILE} {
     padding: 0;
   }
+  p {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
 `;
 
 const Content = styled.div`
@@ -33,25 +38,12 @@ const Content = styled.div`
   }
 `;
 
-const faqs = [
-  {
-    question: "coinsとは何のことですか？",
-    answer: "College Of INformation Science の略称です。"
-  },
-  {
-    question: "オタクが多いですか？",
-    answer: "いいえ"
-  },
-  {
-    question: "オタクですか？",
-    answer: "いいえ"
-  }
-];
-
 export default () => (
   <Layout>
     <Page>
       <Contents>
+        <h1>Frequently Asked Questions</h1>
+        <p>新入生からのよくある質問と回答を随時追加していきます。</p>
         {faqs.map(faq => (
           <Content>
             <p className="question">Q: {faq.question}</p>

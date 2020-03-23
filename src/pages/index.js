@@ -4,6 +4,7 @@ import styled from "styled-components";
 import TopCard from "../layouts/TopCard";
 import EventsCard from "../layouts/EventsCard";
 import azarashi from "../imgs/azarashi.png";
+import neko from "../imgs/neko.png";
 import Media from "../const/Media";
 import { graphql } from "gatsby";
 
@@ -29,7 +30,7 @@ const contents = [
     title: "FAQ",
     description: "よくある質問と回答のまとめです。",
     link: "faq",
-    img: azarashi
+    img: neko
   },
   {
     title: "新歓委員より",
