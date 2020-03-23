@@ -24,7 +24,13 @@ const Contents = styled.div`
   p {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    font-size: 1.5rem;
+    ${Media.MOBILE} {
+      padding: 0;
+      font-size: 1.2rem;
+    }
   }
+  
 `;
 
 const Content = styled.div`
