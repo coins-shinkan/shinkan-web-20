@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
 import TopCard from "../layouts/TopCard";
@@ -41,24 +42,29 @@ const contents = [
 ];
 
 export default ({ data }) => (
-  <Layout>
-    <Page>
-      <Cards>
-        <EventsCard data={data} />
-      </Cards>
-      <Cards>
-        {contents.map(contents => (
-          <TopCard
-            key={contents.title}
-            title={contents.title}
-            description={contents.description}
-            link={contents.link}
-            img={contents.img}
-          />
-        ))}
-      </Cards>
-    </Page>
-  </Layout>
+  <>
+    <Helmet>
+      <title>COINS新歓2020</title>
+    </Helmet>
+    <Layout>
+      <Page>
+        <Cards>
+          <EventsCard data={data} />
+        </Cards>
+        <Cards>
+          {contents.map(contents => (
+            <TopCard
+              key={contents.title}
+              title={contents.title}
+              description={contents.description}
+              link={contents.link}
+              img={contents.img}
+            />
+          ))}
+        </Cards>
+      </Page>
+    </Layout>
+  </>
 );
 
 export const query = graphql`

@@ -25,7 +25,6 @@ const Wrapper = styled.div`
 export default ({ children }) => (
   <>
     <Helmet>
-      <title>coins新歓 2020</title>
       <link
         href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"
         rel="stylesheet"

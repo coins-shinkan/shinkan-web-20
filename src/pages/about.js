@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
 import Color from "../const/Color";
@@ -17,6 +18,9 @@ const Contents = styled.div`
 
 const Content = styled.div`
   padding: 0.8rem;
+  p {
+    font-size: 1.3rem;
+  }
 `;
 
 const Page = styled.div`
@@ -28,18 +32,23 @@ const Page = styled.div`
 `;
 
 export default () => (
-  <Layout>
-    <Page>
-      <Contents>
-        {contents.map(content => (
-          <Content>
-            <h2>{content.title}</h2>
-            {content.paragraphs.map(paragraph => (
-              <p>{paragraph}</p>
-            ))}
-          </Content>
-        ))}
-      </Contents>
-    </Page>
-  </Layout>
+  <>
+    <Helmet>
+      <title>新歓委員より - COINS新歓2020</title>
+    </Helmet>
+    <Layout>
+      <Page>
+        <Contents>
+          {contents.map(content => (
+            <Content>
+              <h1>{content.title}</h1>
+              {content.paragraphs.map(paragraph => (
+                <p>{paragraph}</p>
+              ))}
+            </Content>
+          ))}
+        </Contents>
+      </Page>
+    </Layout>
+  </>
 );
