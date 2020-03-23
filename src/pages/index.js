@@ -1,9 +1,11 @@
 import React from "react";
+import Helmet from "react-helmet";
 import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
 import TopCard from "../layouts/TopCard";
 import EventsCard from "../layouts/EventsCard";
 import azarashi from "../imgs/azarashi.png";
+import neko from "../imgs/neko.png";
 import Media from "../const/Media";
 import { graphql } from "gatsby";
 
@@ -29,7 +31,7 @@ const contents = [
     title: "FAQ",
     description: "よくある質問と回答のまとめです。",
     link: "faq",
-    img: azarashi
+    img: neko
   },
   {
     title: "新歓委員より",
@@ -40,24 +42,29 @@ const contents = [
 ];
 
 export default ({ data }) => (
-  <Layout>
-    <Page>
-      <Cards>
-        <EventsCard data={data} />
-      </Cards>
-      <Cards>
-        {contents.map(contents => (
-          <TopCard
-            key={contents.title}
-            title={contents.title}
-            description={contents.description}
-            link={contents.link}
-            img={contents.img}
-          />
-        ))}
-      </Cards>
-    </Page>
-  </Layout>
+  <>
+    <Helmet>
+      <title>COINS新歓2020</title>
+    </Helmet>
+    <Layout>
+      <Page>
+        <Cards>
+          <EventsCard data={data} />
+        </Cards>
+        <Cards>
+          {contents.map(contents => (
+            <TopCard
+              key={contents.title}
+              title={contents.title}
+              description={contents.description}
+              link={contents.link}
+              img={contents.img}
+            />
+          ))}
+        </Cards>
+      </Page>
+    </Layout>
+  </>
 );
 
 export const query = graphql`

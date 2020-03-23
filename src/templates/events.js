@@ -20,11 +20,18 @@ const EventMenu = styled.div`
   background: ${Color.WHITE};
   float: left;
   padding: 1rem;
-  p:hover {
+  a:hover {
     background-color: ${Color.SECONDARY};
   }
-  p {
+  a {
     border-bottom: medium dashed ${Color.SECONDARY};
+    text-decoration: none;
+    display: block;
+    padding-top: 0.5rem;
+    color: ${Color.BLACK};
+  }
+  a:visited {
+    color: ${Color.BLACK};
   }
   ${Media.MOBILE} {
     order: 1;
@@ -57,6 +64,12 @@ const EventDescription = styled.div`
   ${Media.MOBILE} {
     width: 100%;
     order: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 90%;
+    max-width: 80rem;
+    display: inline-block;
   }
   .articleHead {
     display: flex;
@@ -100,13 +113,11 @@ export default ({ data }) => {
           <EventMenu>
             {eventList.map(event => {
               return (
-                <p>
+                <a href={event.node.frontmatter.path}>
                   {event.node.frontmatter.date}
                   <br />
-                  <a href={event.node.frontmatter.path}>
-                    {event.node.frontmatter.title}
-                  </a>
-                </p>
+                  {event.node.frontmatter.title}
+                </a>
               );
             })}
           </EventMenu>

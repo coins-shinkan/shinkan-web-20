@@ -1,8 +1,10 @@
 import React from "react";
+import Helmet from "react-helmet";
 import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
 import Color from "../const/Color";
 import Media from "../const/Media";
+import contents from "../contents/about.json";
 
 const Contents = styled.div`
   height: 100%;
@@ -16,6 +18,9 @@ const Contents = styled.div`
 
 const Content = styled.div`
   padding: 0.8rem;
+  p {
+    font-size: 1.3rem;
+  }
 `;
 
 const Page = styled.div`
@@ -26,37 +31,24 @@ const Page = styled.div`
   flex-direction: column;
 `;
 
-const contents = [
-  {
-    title: "委員長お気持ち表明",
-    paragraphs: [
-      "初春の候、新入生の皆様におかれましてはますますご健勝のことと存じます。",
-      "皆様におかれましては、キモ・インターネッツを差し控えるよう、お願い申し上げます。"
-    ]
-  },
-  {
-    title: "委員長のお言葉",
-    paragraphs: [
-      "初春の候、新入生の皆様におかれましてはますますご健勝のことと存じます。",
-      "ああああああああああああああああああああああああああああああああああああ",
-      "ああああああああああああああああああああああああああああああああああああaaaa"
-    ]
-  }
-];
-
 export default () => (
-  <Layout>
-    <Page>
-      <Contents>
-        {contents.map(content => (
-          <Content>
-            <h2>{content.title}</h2>
-            {content.paragraphs.map(paragraph => (
-              <p>{paragraph}</p>
-            ))}
-          </Content>
-        ))}
-      </Contents>
-    </Page>
-  </Layout>
+  <>
+    <Helmet>
+      <title>新歓委員より - COINS新歓2020</title>
+    </Helmet>
+    <Layout>
+      <Page>
+        <Contents>
+          {contents.map(content => (
+            <Content>
+              <h1>{content.title}</h1>
+              {content.paragraphs.map(paragraph => (
+                <p>{paragraph}</p>
+              ))}
+            </Content>
+          ))}
+        </Contents>
+      </Page>
+    </Layout>
+  </>
 );
