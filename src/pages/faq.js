@@ -9,22 +9,21 @@ import faqs from "../contents/faq.json";
 const Page = styled.div`
   display: flex;
   height: 100%;
-  width: 92vw;
-  max-width: 70rem;
+  width: 70rem;
   flex-direction: column;
+  ${Media.MOBILE} {
+    width: 100%;
+  }
 `;
 
 const Contents = styled.div`
   height: 100%;
-  width: 100%;
   background: ${Color.WHITE};
   padding: 1rem;
   ${Media.MOBILE} {
-    padding: 0;
+    padding: 1rem 4vw;
   }
   p {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
     font-size: 1.5rem;
     ${Media.MOBILE} {
       padding: 0;
@@ -34,13 +33,16 @@ const Contents = styled.div`
 `;
 
 const Content = styled.div`
-  padding: 0.8rem;
+  padding: 0.8rem 0;
   border-bottom: medium dashed ${Color.SECONDARY};
   .question {
     font-size: 1.8rem;
   }
   .answer {
     font-size: 1.6rem;
+  }
+  :last-child {
+    border-bottom: none;
   }
 `;
 
