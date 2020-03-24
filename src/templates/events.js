@@ -27,7 +27,7 @@ const EventMenu = styled.div`
     border-bottom: medium dashed ${Color.SECONDARY};
     text-decoration: none;
     display: block;
-    padding-top: 0.5rem;
+    padding: 0.5rem;
     color: ${Color.BLACK};
   }
   a:visited {
@@ -66,7 +66,7 @@ const EventDescription = styled.div`
     order: 0;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    /* text-align: center; */
     width: 90%;
     max-width: 80rem;
     display: inline-block;
