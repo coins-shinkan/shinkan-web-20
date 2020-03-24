@@ -13,6 +13,7 @@ const Card = styled.div`
   padding: 1rem;
   ${Media.MOBILE} {
     width: auto;
+    padding-bottom: 2rem;
   }
 `;
 

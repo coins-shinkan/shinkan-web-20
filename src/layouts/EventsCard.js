@@ -12,7 +12,7 @@ const Events = styled.div`
   grid-auto-rows: 14rem;
   margin: 1rem;
   padding-left: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   padding-right: 2rem;
   width: 100%;
   ${Media.MOBILE} {
@@ -21,6 +21,9 @@ const Events = styled.div`
   }
   a {
     color: black;
+  }
+  table {
+    width: 100%;
   }
   h2 {
     font-size: 2rem;
@@ -37,12 +40,22 @@ const EventElement = styled.a`
   text-decoration: none;
   font-size: 1.4rem;
   margin-bottom: 0;
-  margin-top: 0.5rem;
+  padding: 0.3rem 0;
   border-bottom: medium dashed ${Color.SECONDARY};
   white-space: pre;
+  td {
+    min-width: 11rem;
+    :first-child {
+      min-width: fit-content;
+    }
+  }
   ${Media.MOBILE} {
     font-size: 1rem;
-    margin-top: 0.2rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.4rem;
+    td {
+      min-width: 7rem;
+    }
   }
   :hover {
     background-color: ${Color.SECONDARY};
@@ -52,14 +65,19 @@ const EventElement = styled.a`
 export default ({ data }) => {
   const eventList = data.allMarkdownRemark.edges;
   return (
-    <Events href>
+    <Events>
       <h2>新歓行事一覧</h2>
-      {eventList.map(event => (
-        <EventElement href={event.node.frontmatter.path}>
-          ・ {event.node.frontmatter.date.padEnd(20, " ")}
-          {event.node.frontmatter.title}
-        </EventElement>
-      ))}
+      <table>
+        {eventList.map(event => (
+          <tr>
+            <EventElement href={event.node.frontmatter.path}>
+              <td>・</td>
+              <td>{event.node.frontmatter.date}</td>
+              <td>{event.node.frontmatter.title}</td>
+            </EventElement>
+          </tr>
+        ))}
+      </table>
     </Events>
   );
 };

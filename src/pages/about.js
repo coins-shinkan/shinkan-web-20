@@ -26,9 +26,11 @@ const Content = styled.div`
 const Page = styled.div`
   display: flex;
   height: 100%;
-  width: 92vw;
-  max-width: 70rem;
+  width: 70rem;
   flex-direction: column;
+  ${Media.MOBILE} {
+    width: 100%;
+  }
 `;
 
 export default () => (
