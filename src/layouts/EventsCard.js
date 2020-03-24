@@ -43,18 +43,21 @@ const EventElement = styled.a`
   padding: 0.3rem 0;
   border-bottom: medium dashed ${Color.SECONDARY};
   white-space: pre;
-  td {
+  td.title {
+    font-size: 1.3rem;
+  }
+  /* td {
     min-width: 11rem;
     :first-child {
-      min-width: fit-content;
+      width: fit-content;
     }
-  }
+  } */
   ${Media.MOBILE} {
     font-size: 1rem;
     padding-top: 0.2rem;
     padding-bottom: 0.4rem;
     td {
-      min-width: 7rem;
+      min-width: 9rem;
     }
   }
   :hover {
@@ -66,16 +69,17 @@ export default ({ data }) => {
   const eventList = data.allMarkdownRemark.edges;
   return (
     <Events>
-      <h2>新歓行事一覧</h2>
+      <h2>ニュース一覧</h2>
       <table>
         {eventList.map(event => (
-          <tr>
-            <EventElement href={event.node.frontmatter.path}>
-              <td>・</td>
-              <td>{event.node.frontmatter.date}</td>
-              <td>{event.node.frontmatter.title}</td>
-            </EventElement>
-          </tr>
+          <EventElement href={event.node.frontmatter.path}>
+            <tr>
+              <td className="title">{event.node.frontmatter.title}</td>
+            </tr>
+            <tr>
+              <td>投稿日: {event.node.frontmatter.date}</td>
+            </tr>
+          </EventElement>
         ))}
       </table>
     </Events>

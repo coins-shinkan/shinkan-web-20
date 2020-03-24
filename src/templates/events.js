@@ -111,12 +111,13 @@ export default ({ data }) => {
       <Layout>
         <Content>
           <EventMenu>
+            <h2>ニュース一覧</h2>
             {eventList.map(event => {
               return (
                 <a href={event.node.frontmatter.path}>
-                  {event.node.frontmatter.date}
-                  <br />
                   {event.node.frontmatter.title}
+                  <br />
+                  {event.node.frontmatter.date}
                 </a>
               );
             })}
@@ -124,7 +125,7 @@ export default ({ data }) => {
           <EventDescription>
             <div className="articleHead">
               <h1 className="title">{post.frontmatter.title}</h1>
-              <h4 className="date">{post.frontmatter.date}</h4>
+              <h4 className="date">投稿日: {post.frontmatter.date}</h4>
             </div>
             <hr />
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
