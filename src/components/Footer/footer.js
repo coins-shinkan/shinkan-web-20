@@ -1,12 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Color from "../../const/Color";
-import Media from "../../const/Media";
 
 const FooterRoot = styled.div`
   background: ${Color.FOOTER};
   height: 100%;
-  padding-bottom: 1.2rem;
   display: flex;
 `;
 
@@ -14,12 +12,14 @@ const Wrapper = styled.div`
   font-size: 1.2rem;
   width: 100%;
   padding-top: 1rem;
-  padding-left: 1rem;
+  padding-bottom: 1.2rem;
 `;
 
 const Text = styled.p`
   font-size: 1rem;
-  padding: 0.3rem;
+  color: white;
+  margin: 1rem;
+  padding: 0;
 `;
 
 const OrgName = styled(Text)`
