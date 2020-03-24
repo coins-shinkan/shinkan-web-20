@@ -3,5 +3,5 @@ export default {
   SECONDARY: "#f1f3f5",
   WHITE: "#ffffff",
   BLACK: "#000000",
-  FOOTER: "#adb5bd"
+  FOOTER: "#304061"
 };

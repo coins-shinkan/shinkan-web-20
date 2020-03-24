@@ -15,20 +15,23 @@ const Wrapper = styled.div`
   width: 100%;
   padding-top: 1rem;
   padding-left: 1rem;
-  p {
-    ${Media.MOBILE} {
-      font-size: 1rem;
-      margin: 0.2rem;
-    }
-  }
+`;
+
+const Text = styled.p`
+  font-size: 1rem;
+  padding: 0.3rem;
+`;
+
+const OrgName = styled(Text)`
+  font-size: 1.2rem;
 `;
 
 export default () => (
   <FooterRoot>
     <Wrapper>
-      <p>筑波大学</p>
-      <p>情報学群 情報科学類</p>
-      <p>茨城県つくば市天王台1-1-1</p>
+      <OrgName>筑波大学令和2年度情報科学類新入生歓迎委員会</OrgName>
+      <Text>筑波大学 情報学群 情報科学類</Text>
+      <Text>茨城県つくば市天王台1-1-1</Text>
     </Wrapper>
   </FooterRoot>
 );
