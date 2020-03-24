@@ -37,9 +37,15 @@ const Content = styled.div`
   border-bottom: medium dashed ${Color.SECONDARY};
   .question {
     font-size: 1.8rem;
+    ${Media.MOBILE} {
+      font-size: 1.4rem;
+    }
   }
   .answer {
     font-size: 1.6rem;
+    ${Media.MOBILE} {
+      font-size: 1.2rem;
+    }
   }
   :last-child {
     border-bottom: none;
