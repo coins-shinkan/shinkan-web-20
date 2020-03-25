@@ -1,56 +1,24 @@
 import React from "react";
-import Helmet from "react-helmet";
-import Layout from "../components/Layout/Layout";
-import styled from "styled-components";
-import Color from "../const/Color";
-import Media from "../const/Media";
-import contents from "../contents/about.json";
+import "./card.css";
+import gazo from "./murakami.jpg";
 
-const Contents = styled.div`
-  height: 100%;
-  width: 100%;
-  background: ${Color.WHITE};
-  padding: 1rem;
-  ${Media.MOBILE} {
-    padding: 0;
-  }
-`;
+function App() {
+  return (
+    <div className="card">
+      <div>
+        <img className="card-img" src={gazo} alt=""></img>
+      </div>
+      <div className="card-content">
+        <h1 className="card-title">村上 皓亮</h1>
+        <p className="card-text">
+          新歓委員長です。全部の行事にいる予定なので僕だけ覚えてればなんとかなります。写真はチワワに吠えられる僕です。
+        </p>
+      </div>
+      <div className="card-link">
+        <a href="https://twitter.com/ITF_village">twitter</a>
+      </div>
+    </div>
+  );
+}
 
-const Content = styled.div`
-  padding: 0.8rem;
-  p {
-    font-size: 1.3rem;
-  }
-`;
-
-const Page = styled.div`
-  display: flex;
-  height: 100%;
-  width: 70rem;
-  flex-direction: column;
-  ${Media.MOBILE} {
-    width: 100%;
-  }
-`;
-
-export default () => (
-  <>
-    <Helmet>
-      <title>新歓委員より - COINS新歓2020</title>
-    </Helmet>
-    <Layout>
-      <Page>
-        <Contents>
-          {contents.map(content => (
-            <Content>
-              <h1>{content.title}</h1>
-              {content.paragraphs.map(paragraph => (
-                <p>{paragraph}</p>
-              ))}
-            </Content>
-          ))}
-        </Contents>
-      </Page>
-    </Layout>
-  </>
-);
+export default App;
