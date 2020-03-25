@@ -4,6 +4,7 @@ import Color from "../const/Color";
 import Media from "../const/Media";
 
 const Events = styled.div`
+  filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.15));
   border-radius: 1rem;
   display: block;
   text-decoration: none;

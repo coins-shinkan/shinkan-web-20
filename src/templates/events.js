@@ -51,6 +51,10 @@ const EventMenu = styled.div`
       display: block;
     }
   }
+  h2 {
+    padding-top: 1rem;
+    padding-bottom: 1.2rem;
+  }
 `;
 
 const EventDescription = styled.div`
