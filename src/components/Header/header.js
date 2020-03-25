@@ -30,10 +30,10 @@ const Description = styled.div`
 
 const DescriptionChild = styled.div`
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   text-align: left;
   ${Media.MOBILE} {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 `;
 
