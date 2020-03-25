@@ -16,7 +16,7 @@ const PageBody = styled.div`
 const Wrapper = styled.div`
   height: auto;
   min-height: 100vh;
-  width: auto;
+  width: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
   font-family: "Noto Sans JP", sans-serif;
@@ -29,6 +29,7 @@ export default ({ children }) => (
         href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"
         rel="stylesheet"
       ></link>
+      <meta name="viewport" content="width=device-width" />
     </Helmet>
     <Wrapper>
       <Header />
