@@ -4,6 +4,7 @@ import Color from "../const/Color";
 import Media from "../const/Media";
 
 const Card = styled.div`
+  filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.15));
   border-radius: 1rem;
   display: grid;
   grid-auto-rows: 14rem;
