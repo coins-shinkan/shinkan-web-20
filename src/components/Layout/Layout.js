@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 import styled from "styled-components";
 import Footer from "../Footer/footer";
 import Color from "../../const/Color";
+import "normalize.css";
 
 const PageBody = styled.div`
   align-items: center;
@@ -14,11 +15,10 @@ const PageBody = styled.div`
 
 const Wrapper = styled.div`
   height: auto;
-  min-height: 97.9vh;
+  min-height: 100vh;
   width: auto;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  margin: -0.5rem;
   font-family: "Noto Sans JP", sans-serif;
 `;
 
