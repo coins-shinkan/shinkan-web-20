@@ -59,6 +59,7 @@ const EventDescription = styled.div`
   padding: 1rem 3rem;
   width: 80%;
   background: ${Color.WHITE};
+  word-break: break-all;
   ${Media.MOBILE} {
     width: 90%;
     padding: 1rem 5%;
@@ -134,7 +135,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query($path: String!) {
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           frontmatter {
