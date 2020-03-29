@@ -36,11 +36,7 @@ const EventMenu = styled.div`
   ${Media.MOBILE} {
     order: 1;
     float: none;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    width: 90%;
-    max-width: 80rem;
     display: inline-block;
   }
   p {
@@ -54,25 +50,20 @@ const EventMenu = styled.div`
   h2 {
     padding-top: 1rem;
     padding-bottom: 1.2rem;
+    padding-left: 0.5rem;
   }
 `;
 
 const EventDescription = styled.div`
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  max-width: 80rem;
+  padding: 1rem 3rem;
+  width: 80%;
   background: ${Color.WHITE};
-  padding: 1rem;
+  word-break: break-all;
   ${Media.MOBILE} {
-    width: 100%;
-    order: 0;
-    margin-left: auto;
-    margin-right: auto;
-    /* text-align: center; */
     width: 90%;
-    max-width: 80rem;
+    padding: 1rem 5%;
+    order: 0;
     display: inline-block;
   }
   .articleHead {
@@ -95,12 +86,14 @@ const EventDescription = styled.div`
     margin-left: auto;
     ${Media.MOBILE} {
       text-align: left;
-      margin: 0;
-      margin-left: 0.5rem;
+      margin: 1rem 0.5rem;
     }
   }
   hr {
     margin-bottom: 1rem;
+  }
+  p {
+    line-height: 1.3rem;
   }
 `;
 
@@ -142,7 +135,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query($path: String!) {
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           frontmatter {
