@@ -5,7 +5,7 @@ import Layout from "../components/Layout/Layout";
 import { graphql } from "gatsby";
 import Media from "../const/Media";
 import Color from "../const/Color";
-
+import "github-markdown-css";
 const Content = styled.div`
   display: flex;
   width: 100vw;
@@ -125,7 +125,10 @@ export default ({ data }) => {
               <h4 className="date">投稿日: {post.frontmatter.date}</h4>
             </div>
             <hr />
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div
+              className="markdown-body"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
           </EventDescription>
         </Content>
       </Layout>
