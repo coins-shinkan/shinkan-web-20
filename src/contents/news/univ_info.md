@@ -18,7 +18,7 @@ date: "2020-04-01"
 
 昨年度までは入学式後に対面形式でのオリエンテーションが行われていましたが、今年度は形式が変更されることになっています。
 
-## オリエンテーションについての情報
+#### オリエンテーションについての情報
 
 4/15 までに、[こちらのページ](http://www.tsukuba.ac.jp/campuslife/ceremony/orientation-2020-4.html)に掲載される予定です(随時更新されます)。
 
@@ -29,6 +29,7 @@ date: "2020-04-01"
 
 4/6 から 4/14 までの期間に、オンラインで体育の科目登録を行います。
 科目登録には、学生証と統一認証パスワードが必要です。
+
 詳しい情報は、4/6 までに、 [体育センター HP](http://www.tsukuba.ac.jp/campuslife/ceremony/orientation-2020-4.html)に掲載される予定です[^1]。
 
 [^1]: http://www.tsukuba.ac.jp/campuslife/ceremony/pdf/orientation-2020/zengaku-taiiku.pdf

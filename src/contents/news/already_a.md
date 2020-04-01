@@ -27,4 +27,4 @@ date: "2020-04-01"
 </tbody>
 </table>
 
-[^1]: https://www.coins.tsukuba.ac.jp/enrolled_student/freshman2020/#20200325https://www.coins.tsukuba.ac.jp/enrolled_student/freshman2020/#20200325
+[^1]: https://www.coins.tsukuba.ac.jp/enrolled_student/freshman2020/#20200325
