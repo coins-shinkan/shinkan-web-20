@@ -10,11 +10,17 @@ date: "2020-04-01"
 
 新型コロナウイルス感染症の影響で、新入生・編入生向けの情報が**刻々と変化しています**。情報が更新されましたら、改めて当サイトや LINE にてお知らせいたします。
 
+したがって、当サイトをこまめに確認し、LINE 公式アカウントにも登録してください[^1]
+
+[^1]: 原則 LINE 公式アカウントの登録をしていただきますが、何らかの理由で LINE を利用できない、したくない方も多くいらっしゃると思います。2020 年入学生の有志が Discord サーバーを運営しています。入会希望・問い合わせ先: [@cyanolupus](https://twitter.com/cyanolupus/) [@misc47](https://twitter.com/misc47/) [@internal_yusuke](https://twitter.com/misc47/) [@coord2e](https://twitter.com/misc47/)
+
 また、大学の各組織が発する情報、特に所属学類(皆さんは情報科学類)が発する情報を必ずお読みください。
 
 **学類によって方針が異なります。** Twitter 等で配信される情報は、どの組織の情報なのかを確認してください。
 
 わからないことがありましたら、[新歓 Twitter](https://twitter.com/2020coins) または LINE@ まで、お気軽にお問い合わせください（皆さんと同じく、我々新歓委員が入手できる情報も限られていますので、必ず皆さんの質問にお答えできる訳ではございません。ご了承ください）。
+
+何らかの理由で LINE を利用できない、したくない方も多くいらっしゃると思います。2020 年入学生の有志が Discord サーバーを運営しています。
 
 ## オリエンテーションについて
 
@@ -38,9 +44,9 @@ date: "2020-04-01"
 4/6 から 4/14 までの期間に、オンラインで体育の科目登録を行います。
 科目登録には、学生証と統一認証パスワードが必要です。
 
-詳しい情報は、4/6 までに、 [体育センター HP](http://www.tsukuba.ac.jp/campuslife/ceremony/orientation-2020-4.html)に掲載される予定です[^1]。
+詳しい情報は、4/6 までに、 [体育センター HP](http://www.tsukuba.ac.jp/campuslife/ceremony/orientation-2020-4.html)に掲載される予定です[^2]。
 
-[^1]: http://www.tsukuba.ac.jp/campuslife/ceremony/pdf/orientation-2020/zengaku-taiiku.pdf
+[^2]: http://www.tsukuba.ac.jp/campuslife/ceremony/pdf/orientation-2020/zengaku-taiiku.pdf
 
 ## 計算機ガイダンスについて
 
