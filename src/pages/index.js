@@ -29,7 +29,8 @@ const Cards = styled.div`
 const contents = [
   {
     title: "FAQ",
-    description: "よくある質問と回答のまとめです。",
+    description:
+      "よくある質問と回答のまとめです。新歓委員に質問する前にこちらをご覧ください。",
     link: "faq",
     img: neko
   },
@@ -50,6 +51,14 @@ export default ({ data }) => (
       <Page>
         <Cards>
           <EventsCard data={data} />
+        </Cards>
+        <Cards>
+          <TopCard
+            title="新歓LINEを登録してください"
+            description="重要な情報を配信するので、新歓LINEを登録し、重要な情報を必ず見逃さないようにしてください。クリックすると友達登録画面を開きます。LINE ID: @892epdec"
+            link="https://lin.ee/lWPRX87"
+            img="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+          />
         </Cards>
         <Cards>
           {contents.map(contents => (
