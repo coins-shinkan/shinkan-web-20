@@ -32,14 +32,14 @@ const contents = [
     description:
       "よくある質問と回答のまとめです。新歓委員に質問する前にこちらをご覧ください。",
     link: "faq",
-    img: neko,
+    img: neko
   },
   {
     title: "新歓委員より",
     description: "私たちから、新入生の皆さんへのごあいさつです。",
     link: "about",
-    img: azarashi,
-  },
+    img: azarashi
+  }
 ];
 
 export default ({ data }) => (
@@ -61,7 +61,7 @@ export default ({ data }) => (
           />
         </Cards>
         <Cards>
-          {contents.map((contents) => (
+          {contents.map(contents => (
             <TopCard
               key={contents.title}
               title={contents.title}
