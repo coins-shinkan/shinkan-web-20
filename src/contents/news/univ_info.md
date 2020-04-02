@@ -12,7 +12,7 @@ date: "2020-04-02"
 
 したがって、当サイトをこまめに確認し、LINE 公式アカウントにも登録してください[^1]
 
-[^1]: 原則 LINE 公式アカウントの登録をしていただきますが、何らかの理由で LINE を利用できない、したくない方も多くいらっしゃると思います。2020 年入学生の有志が Discord サーバーを運営しています。入会希望・問い合わせ先: [@cyanolupus](https://twitter.com/cyanolupus/) [@misc47](https://twitter.com/misc47/) [@internal_yusuke](https://twitter.com/misc47/) [@coord2e](https://twitter.com/misc47/)
+[^1]: 原則 LINE 公式アカウントの登録をしていただきますが、何らかの理由で LINE を利用できない、したくない方も多くいらっしゃると思います。2020 年入学生の有志が Discord サーバーを運営しています。入会希望・問い合わせ先: [@cyanolupus](https://twitter.com/cyanolupus/) [@misc47](https://twitter.com/misc47/) [@internal_yusuke](https://twitter.com/internal_yusuke/) [@coord2e](https://twitter.com/coord2e/)
 
 また、大学の各組織が発する情報、特に所属学類(皆さんは情報科学類)が発する情報を必ずお読みください。
 
@@ -50,8 +50,7 @@ date: "2020-04-02"
 
 ~~新学期の授業のオンライン化に対応するため、大学のオンラインサービスや情報科学類の計算機の使い方などについての説明が行われます。オンラインで行われるのか，大学で行われるのかは，現在未定です．~~
 
-未定になりました。情報が更新されましたら，改めて当サイトやLINEにてお知らせいたします。
-
+未定になりました。情報が更新されましたら，改めて当サイトや LINE にてお知らせいたします。
 
 ## リンク
 
