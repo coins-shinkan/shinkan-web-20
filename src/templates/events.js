@@ -65,6 +65,9 @@ const EventDescription = styled.div`
     padding: 1rem 5%;
     order: 0;
     display: inline-block;
+    .youtube {
+      width: 100%;
+    }
   }
   .articleHead {
     display: flex;

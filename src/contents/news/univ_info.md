@@ -44,7 +44,15 @@ date: "2020-04-03"
 
 詳しい情報は、4/6 までに、 [こちらのページ](http://www.tsukuba.ac.jp/campuslife/ceremony/orientation-2020-4.html)に掲載される予定です[^2]。
 
+#### 追記(4/3): 解説動画の公開
+
+大学より，体育の履修に関する解説動画が公開されました[^3] [^4]。必ず視聴し、指示に従って履修登録を行ってください。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kMk7bnNYNDY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube"></iframe>
+
 [^2]: http://www.tsukuba.ac.jp/campuslife/ceremony/pdf/orientation-2020/zengaku-taiiku.pdf
+[^3]: http://www.sapec.tsukuba.ac.jp/?p=7814
+[^4]: https://www.youtube.com/watch?v=kMk7bnNYNDY
 
 ## 計算機ガイダンスについて
 
