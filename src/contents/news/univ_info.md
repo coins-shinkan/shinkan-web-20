@@ -46,7 +46,7 @@ date: "2020-04-03"
 
 #### 追記(4/3): 解説動画の公開
 
-大学より，体育の履修に関する解説動画が公開されました[^3] [^4]。必ず視聴し、指示に従って履修登録を行ってください。
+大学より，体育の履修に関する解説動画が公開されました[^3] [^4]。必ず視聴し、指示に従って科目登録を行ってください。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kMk7bnNYNDY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube"></iframe>
 
