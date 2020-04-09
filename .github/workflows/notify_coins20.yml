@@ -44,7 +44,7 @@ jobs:
           curl -fsS -XPOST \
             -H 'Content-Type:application/json' \
             "${{ secrets.COINS20_DISCORD_WEBHOOK_URL }}" \
-            -d @- << EOS
+            -d @- << 'EOS'
               {
                 "username": "coins-shinkan",
                 "avatar_url": "https://raw.githubusercontent.com/coins-shinkan/shinkan-web-20/master/src/imgs/coins.png",
