@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          curl -XPOST \
+          curl -fsS -XPOST \
             -H 'Content-Type:application/json' \
             "${{ secrets.COINS20_DISCORD_WEBHOOK_URL }}" \
             -d @- << EOS
