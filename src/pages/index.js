@@ -35,8 +35,8 @@ const contents = [
     img: neko
   },
   {
-    title: "新歓委員より",
-    description: "私たちから、新入生の皆さんへのごあいさつです。",
+    title: "私たちが作りました",
+    description: "このページを作ったcoins19たちです",
     link: "about",
     img: azarashi
   }
