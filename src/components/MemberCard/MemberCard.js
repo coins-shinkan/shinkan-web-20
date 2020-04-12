@@ -47,7 +47,7 @@ export default ({ props }) => (
   <MemberCard>
     <div>
       <div>
-        <img className="card-img" src={props.img} alt=""></img>
+        <img className="card-img" src={props.img} alt="" />
       </div>
       <div className="card-content">
         <h1 className="card-title">{props.name}</h1>

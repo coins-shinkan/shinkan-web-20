@@ -36,7 +36,7 @@ const Page = styled.div`
   }
 `;
 
-const MemberProperty = [
+const members = [
   {
     img: village,
     name: "むらかみ",
@@ -73,7 +73,7 @@ export default () => (
         <h1>生産者表示</h1>
         <h4>ここに載っている方々以外にもたくさんのお力添えをいただきました</h4>
         <GridCard>
-          {MemberProperty.map(property => (
+          {members.map(property => (
             <MemberCard key={property.name} props={property} />
           ))}
         </GridCard>
