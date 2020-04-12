@@ -4,8 +4,8 @@ import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
 import Media from "../const/Media";
 import village from "../imgs/murakami.jpg";
-import soy from "../imgs/kai.png";
-import shimi from "../imgs/shimi.png";
+import soy from "../imgs/kai.jpg";
+import shimi from "../imgs/shimi.jpg";
 import miss from "../imgs/miss.jpg";
 import MemberCard from "../components/MemberCard/MemberCard.js";
 
@@ -73,8 +73,14 @@ export default () => (
         <h1>生産者表示</h1>
         <h4>ここに載っている方々以外にもたくさんのお力添えをいただきました</h4>
         <GridCard>
-          {members.map(property => (
-            <MemberCard key={property.name} props={property} />
+          {members.map(member => (
+            <MemberCard
+              key={member.name}
+              img={member.img}
+              name={member.name}
+              description={member.description}
+              link={member.link}
+            />
           ))}
         </GridCard>
       </Page>

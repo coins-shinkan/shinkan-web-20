@@ -43,18 +43,18 @@ const MemberCard = styled.div`
   }
 `;
 
-export default ({ props }) => (
+export default ({ img, name, description, link }) => (
   <MemberCard>
     <div>
       <div>
-        <img className="card-img" src={props.img} alt="" />
+        <img className="card-img" src={img} alt="" />
       </div>
       <div className="card-content">
-        <h1 className="card-title">{props.name}</h1>
-        <p className="card-text">{props.description}</p>
+        <h1 className="card-title">{name}</h1>
+        <p className="card-text">{description}</p>
       </div>
       <div className="card-link">
-        <a href={props.link}>twitter</a>
+        <a href={link}>twitter</a>
       </div>
     </div>
   </MemberCard>
