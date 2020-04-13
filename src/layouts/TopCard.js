@@ -38,10 +38,7 @@ const Link = styled.a`
 
 const Description = styled.p`
   color: ${Color.BLACK};
-  font-size: 1.3rem;
-  ${Media.MOBILE} {
-    font-size: 1.3rem;
-  }
+  font-size: 1.1rem;
 `;
 
 const Img = styled.img`
