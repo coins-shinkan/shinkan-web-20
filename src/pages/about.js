@@ -74,13 +74,7 @@ export default () => (
         <h4>ここに載っている方々以外にもたくさんのお力添えをいただきました</h4>
         <GridCard>
           {members.map(member => (
-            <MemberCard
-              key={member.name}
-              img={member.img}
-              name={member.name}
-              description={member.description}
-              link={member.link}
-            />
+            <MemberCard key={member.name} {...member} />
           ))}
         </GridCard>
       </Page>
