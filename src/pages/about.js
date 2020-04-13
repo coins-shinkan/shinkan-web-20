@@ -2,54 +2,81 @@ import React from "react";
 import Helmet from "react-helmet";
 import Layout from "../components/Layout/Layout";
 import styled from "styled-components";
-import Color from "../const/Color";
 import Media from "../const/Media";
-import contents from "../contents/about.json";
+import village from "../imgs/murakami.jpg";
+import soy from "../imgs/kai.jpg";
+import shimi from "../imgs/shimi.jpg";
+import miss from "../imgs/miss.jpg";
+import MemberCard from "../components/MemberCard/MemberCard.js";
 
-const Contents = styled.div`
-  height: 100%;
-  width: 100%;
-  background: ${Color.WHITE};
-  padding: 1rem;
+const GridCard = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 1em;
   ${Media.MOBILE} {
-    padding: 0;
-  }
-`;
-
-const Content = styled.div`
-  padding: 0.8rem;
-  p {
-    font-size: 1.3rem;
+    grid-template-columns: 1fr;
   }
 `;
 
 const Page = styled.div`
-  display: flex;
   height: 100%;
   width: 70rem;
-  flex-direction: column;
+  h1 {
+    text-align: center;
+  }
+  h4 {
+    text-align: center;
+  }
   ${Media.MOBILE} {
     width: 100%;
   }
+  :last-child {
+    margin-bottom: 10px;
+  }
 `;
+
+const members = [
+  {
+    img: village,
+    name: "むらかみ",
+    description: "新歓委員長です。新入生を歓迎したかった。",
+    link: "https://twitter.com/ITF_village"
+  },
+  {
+    img: shimi,
+    name: "しみちゃん",
+    description: "よしなに",
+    link: "https://twitter.com/sh1mc"
+  },
+  {
+    img: soy,
+    name: "そやま",
+    description: "パンフレットには載っていませんが新歓委員です。",
+    link: "https://twitter.com/0ilpanic"
+  },
+  {
+    img: miss,
+    name: "あおき",
+    description: "アルバイト頑張りすぎて落単しないようにしようね！",
+    link: "https://twitter.com/ITF_menhera"
+  }
+];
 
 export default () => (
   <>
     <Helmet>
-      <title>新歓委員より - COINS新歓2020</title>
+      <title>私たちが作りました</title>
     </Helmet>
     <Layout>
       <Page>
-        <Contents>
-          {contents.map(content => (
-            <Content>
-              <h1>{content.title}</h1>
-              {content.paragraphs.map(paragraph => (
-                <p>{paragraph}</p>
-              ))}
-            </Content>
+        <h1>生産者表示</h1>
+        <h4>ここに載っている方々以外にもたくさんのお力添えをいただきました</h4>
+        <GridCard>
+          {members.map(member => (
+            <MemberCard key={member.name} {...member} />
           ))}
-        </Contents>
+        </GridCard>
       </Page>
     </Layout>
   </>
